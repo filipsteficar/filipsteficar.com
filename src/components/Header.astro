@@ -1,0 +1,15 @@
+---
+import { siteData, mainMenu } from "@/data/global";
+---
+<header class="bg-zinc-100 dark:bg-zinc-900">
+    <nav class="flex flex-row flex-wrap justify-between items-center mx-auto p-fluid-sm container">
+        <a href="/" class="font-heading font-semibold transition-colors duration-500 ease-in-out">{siteData.name}</a>
+        <ul class="flex flex-row flex-wrap gap-fluid-sm">
+            {mainMenu?.map((item) => (
+                <li>
+                    <a href={item.href || "/"}>{item.label || "Unknown"}</a>
+                </li>
+            ))}
+        </ul>
+    </nav>
+</header>

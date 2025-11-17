@@ -5,6 +5,7 @@ import "@/styles/global.css";
 import { siteData } from "@/data/global";
 // Components
 import Head from "@/components/Head.astro";
+import Header from "@/components/Header.astro";
 ---
 <!doctype html>
 <html lang={siteData.lang}>
@@ -16,7 +17,8 @@ import Head from "@/components/Head.astro";
 		<Head />
 		<title>{siteData.name}</title>
 	</head>
-	<body class="bg-neutral-100 dark:bg-neutral-900 dark:text-zinc-100">
+	<body class="bg-zinc-50 dark:bg-zinc-950">
+		<Header />
 		<slot />
 	</body>
 </html>

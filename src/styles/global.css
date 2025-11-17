@@ -17,11 +17,23 @@
     --spacing-fluid-xs: clamp(0.875rem, 0.8304rem + 0.1116vw, 0.9375rem);
     --spacing-fluid-sm: clamp(1.125rem, 1.0357rem + 0.2232vw, 1.25rem);
     --spacing-fluid-base: clamp(1.6875rem, 1.5536rem + 0.3348vw, 1.875rem);
-    --spacing-fluid-l: clamp(2.25rem, 2.0714rem + 0.4464vw, 2.5rem);
+    --spacing-fluid-lg: clamp(2.25rem, 2.0714rem + 0.4464vw, 2.5rem);
     --spacing-fluid-xl: clamp(3.375rem, 3.1071rem + 0.6696vw, 3.75rem);
     --spacing-fluid-2xl: clamp(4.5rem, 4.1429rem + 0.8929vw, 5rem);
     --spacing-fluid-3xl: clamp(5.625rem, 5.1786rem + 1.1161vw, 6.25rem);
     --spacing-fluid-4xl: clamp(6.75rem, 6.2143rem + 1.3393vw, 7.5rem);
+
+    --color-woodland-50: oklch(98.6% 0.031 100.85);
+    --color-woodland-100: oklch(96.407% 0.06296 102.42);
+    --color-woodland-200: oklch(93.214% 0.11893 104.41);
+    --color-woodland-300: oklch(88.821% 0.18389 106.76);
+    --color-woodland-400: oklch(83.04% 0.20869 108.65);
+    --color-woodland-500: oklch(75.501% 0.19233 110.65);
+    --color-woodland-600: oklch(63.157% 0.16201 111.61);
+    --color-woodland-700: oklch(51.148% 0.12875 111.68);
+    --color-woodland-800: oklch(43.932% 0.10517 111.02);
+    --color-woodland-900: oklch(39.816% 0.09158 111.15);
+    --color-woodland-950: oklch(27.412% 0.07061 112.17);
 }
 
 @layer base {
@@ -46,11 +58,28 @@
     h1, h2, h3, h4, h5, h6 {
         font-family: var(--font-heading);
         font-weight: var(--font-weight-semibold);
+        color: var(--color-zinc-950);
+
+        @variant dark {
+            color: var(--color-zinc-50);
+        }
     }
     body {
         font-family: var(--font-body);
         font-weight: var(--font-weight-normal);
         font-size: var(--text-fluid-base);
+        color: var(--color-zinc-800);
+
+        @variant dark {
+            color: var(--color-zinc-200);
+        }
+    }
+    a:hover {
+        color: var(--color-zinc-950);
+
+        @variant dark {
+            color: var(--color-zinc-50);
+        }
     }
 }
 
